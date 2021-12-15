@@ -40,9 +40,9 @@ class ProductController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'product_name' => 'required|string|alpha|max:255',
+            'product_name' => 'required|string|max:255',
             'sku' => 'required|string|max:10|alpha_num',
-            'stock' => 'required|numeric|max:5',
+            'stock' => 'required|numeric',
             'category' => 'required|alpha|string|max:10'
         ]);
 
